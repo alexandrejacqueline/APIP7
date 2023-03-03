@@ -1,0 +1,10 @@
+fastapi
+pandas
+numpy
+streamlit
+uvicorn
+gunicorn
+lightgbm
+shap
+plotly
+matplotlib
