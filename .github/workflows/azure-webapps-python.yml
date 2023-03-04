@@ -20,7 +20,7 @@
 name: Build and deploy Python app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: your-app-name  # set this to the name of your Azure Web App
+  AZURE_WEBAPP_NAME: opcp7  # set this to the name of your Azure Web App
   PYTHON_VERSION: '3.10'              # set this to the Python version to use
 
 on:
@@ -82,6 +82,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'alexjfastapi'
+          app-name: 'opcp7'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3D6833565A874B73B4C3FE59069D44C4 }}
