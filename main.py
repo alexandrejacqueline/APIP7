@@ -9,7 +9,7 @@ import pandas.util.testing as tm
 #load modele and data
 model = pickle.load(open('lightgbm_DONE.pkl','rb'))
 import pandas as pd
-X = pd.read_csv('testing_data.csv').set_index("SK_ID_CURR")
+X = pd.read_csv('testing_data.csv').drop(columns=["Unnamed: 0"])
 
 # Création d'une nouvelle instance fastAPI
 app = FastAPI()
