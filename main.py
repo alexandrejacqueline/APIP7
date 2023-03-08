@@ -24,10 +24,7 @@ class request_body(BaseModel):
 #        orm_mode = True
 
 
-# Définition du chemin du point de terminaison (API)
 @app.post("/predict")  # local : http://127.0.0.1:8000/predict
-
-# Définition de la fonction de prédiction
 def predict(ID: request_body):
         # Nouvelles données sur lesquelles on fait la prédiction
         donnees_client = X[X['SK_ID_CURR'] == ID.SK_ID_CURR]
@@ -39,10 +36,11 @@ def predict(ID: request_body):
 
 
 #Entrer le num client
-@app.get("/items/{item_id}")
-async def read_user_item(client_id: str):
-        item = {"client_id": client_id}
-        return item
+@app.get("/")  #/items/{item_id}
+async def read_user_item():   #client_id: str
+      #  item = {"client_id": client_id}
+        return {'msg': "Hello World"}
+
 
 # uvicorn main:app
 
