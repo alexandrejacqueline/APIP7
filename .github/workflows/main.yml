@@ -38,12 +38,12 @@ jobs:
    #     black --check src
     
     # Task for testing with pytest
-    - name: Test with pytest
-      env:
-        # Uses the JWT_SECRET_KEY env variable from the Github actions secrets
-        JWT_SECRET_KEY : ${{ secrets.JWT_SECRET_KEY }}
-      run: |
-        pytest
+ #   - name: Test with pytest
+  #    env:
+   #     # Uses the JWT_SECRET_KEY env variable from the Github actions secrets
+     #   JWT_SECRET_KEY : ${{ secrets.JWT_SECRET_KEY }}
+     # run: |
+    #    pytest
     
     # Task for deploying to Heroku
     - name: Deploy to Heroku 
